@@ -81,9 +81,9 @@ Meeting on October 1, 13:00: Getting more concrete!
 - **10:30 – 11:00**: Welcome & Introductions in Person
 - **11:00 – 12:30**: Keynote, [Gregor Betz](https://www.gregorbetz.de/)
 - *12:30 – 14:00: Lunch break and move to Kromme Nieuwegracht 80 – 1.06*  
-- **14:00 – 16:00**: Notebook or project work.  
-- *16:00 – 16:30: Coffee/snacks*  
-- **16:30 – 18:00**: 3 short paper presentations
+- **14:00 – 16:30**: Notebook or project work.  
+- *16:30– 17:00: Coffee/snacks*  
+- **17:00 – 18:00**: 3 short paper presentations
 :::
 
 
@@ -95,9 +95,9 @@ Meeting on October 1, 13:00: Getting more concrete!
 - **10:00 – 11:30**: Free project work.  
 - **11:30 – 13:00**: Keynote [Charles Pence](https://charlespence.net/en/)
 - *13:00 – 14:30: Lunch break*  
-- **14:00 – 16:00**: Project work.  
-- *16:00 – 16:30: Coffee/snacks*  
-- **16:30 – 18:00**: 3 short paper presentations
+- **14:00 – 16:30**: Project work.  
+- *16:30 – 17:00: Coffee/snacks*  
+- **17:00 – 18:00**: 3 short paper presentations
 -  Evening Program?
 :::
 
@@ -106,11 +106,12 @@ Meeting on October 1, 13:00: Getting more concrete!
 *Drift 27 (E0.32, Digital Humanities Workspace)* 
 
 :::{.nonincremental}
-- **10:00 – 12:30**: Project Work.  
+- **10:00 – 12:30**: Project Work (open doors: 9:00) 
 - *12:30 – 14:00: Lunch break*  
 - **14:00 – 16:00**: 4 project presentations (start at 15:00).  
 - *16:00 – 16:30: Coffee/snacks*  
-- **16:30 – 18:00**: 6 project presentations (from 15:30, continue after the break).  
+- **16:30 – 18:00**: 6 project presentations (from 15:30, continue after the break).
+- **18:00 - 18:30**: Outro & Farewell
 :::
 
 
