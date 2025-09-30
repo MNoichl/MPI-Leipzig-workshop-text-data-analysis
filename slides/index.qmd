@@ -143,6 +143,17 @@ needs to happen until October 16.
 
 
 
+
+
+# 
+
+::: {.r-fit-text .highlight}
+First meeting
+:::
+::: {.r-fit-text }
+Meeting on September 17, 11:00: Introductions, etc.!
+:::
+
 # Plan for today
 
 1. ⁠Welcome and Introduction.
