@@ -47,12 +47,101 @@ max-scale: 1.6
 
 <iframe
   src="qrcode.html"
-  width="700"
-  height="700"
+  width="550"
+  height="550"
   style="border:0; display: block; margin: 0 auto;"
 ></iframe>
 
 Follow along at: [https://mnoichl.github.io/OZSW2025-data-driven-philosophy/](https://mnoichl.github.io/OZSW2025-data-driven-philosophy/)
+
+
+# 
+
+::: {.r-fit-text .highlight}
+Second meeting
+:::
+::: {.r-fit-text }
+Meeting on October 1, 13:00: Getting more concrete!
+:::
+
+# Plan for today
+
+1. Plan for the hackathon
+2. ⁠Assign presentations
+3. Developing project ideas
+
+
+# Hackathon: Thursday, October, 16th
+
+:::{.nonincremental}
+
+*Janskerkhof 13 (Room 0.06) in the morning, Kromme Nieuwegracht 80 (Room 1.06) in the afternoon.*
+
+- **10:00 – 10:30**: Registration, coffee.  
+- **10:30 – 11:00**: Welcome & Introductions in Person
+- **11:00 – 12:30**: Keynote, [Gregor Betz](https://www.gregorbetz.de/)
+- *12:30 – 14:00: Lunch break and move to Kromme Nieuwegracht 80 – 1.06*  
+- **14:00 – 16:00**: Notebook or project work.  
+- *16:00 – 16:30: Coffee/snacks*  
+- **16:30 – 18:00**: 3 short paper presentations
+:::
+
+
+# Hackathon: Friday, October, 17th
+
+*Janskerkhof 13 (Room 0.06).*
+ 
+:::{.nonincremental}
+- **10:00 – 11:30**: Free project work.  
+- **11:30 – 13:00**: Keynote [Charles Pence](https://charlespence.net/en/)
+- *13:00 – 14:30: Lunch break*  
+- **14:00 – 16:00**: Project work.  
+- *16:00 – 16:30: Coffee/snacks*  
+- **16:30 – 18:00**: 3 short paper presentations
+-  Evening Program?
+:::
+
+# Hackathon: Saturday, October, 18th
+
+*Drift 27 (E0.32, Digital Humanities Workspace)* 
+
+:::{.nonincremental}
+- **10:00 – 12:30**: Project Work.  
+- *12:30 – 14:00: Lunch break*  
+- **14:00 – 16:00**: 4 project presentations (start at 15:00).  
+- *16:00 – 16:30: Coffee/snacks*  
+- **16:30 – 18:00**: 6 project presentations (from 15:30, continue after the break).  
+:::
+
+
+# 
+::: {.r-fit-text }
+Coordinating presentations.
+:::
+
+
+# {background-iframe="https://docs.google.com/spreadsheets/d/1T1GJLFnBSXUdIlOCJdrkjguCykdJIJkbgzgGsFTR6qk/edit?gid=17761206#gid=17761206" background-size="120%" background-position="left bottom" background-opacity="1."}
+
+
+
+# 
+
+::: {.r-fit-text .highlight}
+Project Development
+:::
+
+::: {.r-fit-text }
+Let's go over project ideas,
+:::
+::: {.r-fit-text }
+ see where we stand and what
+:::
+::: {.r-fit-text }
+needs to happen until October 16.
+:::
+
+
+
 
 # Plan for today
 

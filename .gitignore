@@ -28,5 +28,6 @@ config/secrets.yml
 secrets.json
 
 
-# Stanford Encyclopedia directory
+# directories
 stanford-encyclopedia/
+reading_list/
