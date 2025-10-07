@@ -1,6 +1,6 @@
 # Data Driven Philosopy @ OZSW2025
 
-This repository contains information and accompanying material about the OZSW-autumn-school/hackathon event organized by Gregor Bös (Tilburg) & Max Noichl (Utrecht). 
+This repository contains information and accompanying material about the OZSW-autumn-school/hackathon event organized by [Gregor Bös](https://gregorboes.com/) (Tilburg) & [Max Noichl](https://www.maxnoichl.eu) (Utrecht). 
 
 The slides accompanying the course are available here: [https://mnoichl.github.io/OZSW2025-data-driven-philosophy/#/section](https://mnoichl.github.io/OZSW2025-data-driven-philosophy)
 
