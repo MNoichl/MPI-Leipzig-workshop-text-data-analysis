@@ -31,3 +31,6 @@ secrets.json
 # directories
 stanford-encyclopedia/
 reading_list/
+scraping_sep/
+
+scratchcode.py
