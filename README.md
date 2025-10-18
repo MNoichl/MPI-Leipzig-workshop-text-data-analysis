@@ -36,10 +36,9 @@ The slides accompanying the course are available here: [https://mnoichl.github.i
 
 *Drift 27 (E0.32, Digital Humanities Workspace)* 
 
-- **10:00 – 12:30**: Project Work (open doors: 9:00) 
+- **10:00 – 12:30**: Project Work 
 - *12:30 – 14:00: Lunch break*  
-- **14:00 – 15:00**: Project Work
-- **15:00 – 16:00**: 4 project presentations 
+- **14:00 – 16:00**: Project Work
 - *16:00 – 16:30: Coffee/snacks*  
 - **16:30 – 18:00**: 6 project presentations (from 15:30, continue after the break).
 - **18:00 - 18:30**: Outro & Farewell
