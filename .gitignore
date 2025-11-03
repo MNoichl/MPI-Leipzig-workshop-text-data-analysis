@@ -32,6 +32,7 @@ secrets.json
 stanford-encyclopedia/
 reading_list/
 scraping_sep/
+sep_entries/
 
 scratchcode.py
 workbook_01_text_analysis_full_sep.ipynb
