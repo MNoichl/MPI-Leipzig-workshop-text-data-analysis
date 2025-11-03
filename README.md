@@ -4,7 +4,7 @@ This repository contains information and accompanying material about the OZSW-au
 
 The slides accompanying the course are available here: [https://mnoichl.github.io/OZSW2025-data-driven-philosophy/#/section](https://mnoichl.github.io/OZSW2025-data-driven-philosophy)
 
-You can download the slides for Gregor Betz's talk [here](https://github.com/MNoichl/OZSW2025-data-driven-philosophy/raw/main/keynote_slides/Betz-Slides.pdf) and those for Charles Pence's [here](https://github.com/MNoichl/OZSW2025-data-driven-philosophy/raw/main/keynote_slides/Pence-Slides.pdf)
+You can download the slides for Gregor Betz's talk [here](https://github.com/MNoichl/OZSW2025-data-driven-philosophy/raw/main/keynote_slides/Betz-Slides.pdf) and those for Charles Pence's [here](https://github.com/MNoichl/OZSW2025-data-driven-philosophy/raw/main/keynote_slides/Pence-Slides.pdf).
 
 # Schedule
 
