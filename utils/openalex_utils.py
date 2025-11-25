@@ -4,6 +4,7 @@ from pyalex import Works, Authors, Institutions
 import pandas as pd
 import ast, json
 from typing import Optional, Callable
+from tqdm.auto import tqdm
 
 def openalex_url_to_pyalex_query(url):
     """
@@ -499,18 +500,19 @@ def download_openalex_records(
                         
                         print(f'Target size {target_size} > 10k, using batched sampling with batch size {batch_size}')
                         
+                        # Create overall progress bar for batched sampling
+                        pbar = tqdm(total=target_size, desc=f"Random sampling query {i+1}/{len(urls)}", unit="records")
+                        
                         while remaining > 0 and len(sampled_records) < target_size:
                             current_batch_size = min(batch_size, remaining)
                             batch_seed = seed_int + batch_num  # Different seed for each batch
-                            
-                            print(f'Batch {batch_num}: requesting {current_batch_size} samples (seed={batch_seed})')
                             
                             # Sample this batch
                             batch_query = query.sample(current_batch_size, seed=batch_seed)
                             
                             batch_records = []
                             batch_count = 0
-                            for page in batch_query.paginate(per_page=200, method='page', n_max=None):
+                            for page in batch_query.paginate(per_page=200, method='cursor', n_max=None):
                                 for record in page:
                                     # Check for duplicates using OpenAlex ID
                                     record_id = record.get('id', '')
@@ -518,12 +520,11 @@ def download_openalex_records(
                                         seen_ids.add(record_id)
                                         batch_records.append(record)
                                         batch_count += 1
+                                        pbar.update(1)
                             
                             sampled_records.extend(batch_records)
                             remaining -= len(batch_records)
                             batch_num += 1
-                            
-                            print(f'Batch {batch_num-1} complete: got {len(batch_records)} unique records ({len(sampled_records)}/{target_size} total)')
                             
                             progress_cb(0.1 + (0.15 * len(sampled_records) / max(target_size, 1)), 
                                         desc=f"Batched sampling from query {i+1}/{len(urls)}... ({len(sampled_records)}/{target_size})")
@@ -532,17 +533,24 @@ def download_openalex_records(
                             if batch_num > 20:  # Max 20 batches (should handle up to ~200k samples)
                                 print("Warning: Maximum batch limit reached, stopping sampling")
                                 break
+                        
+                        pbar.close()
                     else:
                         # Single batch sampling for <= 10k
                         sampled_query = query.sample(target_size, seed=seed_int)
                         
                         records_count = 0
-                        for page in sampled_query.paginate(per_page=200, method='page', n_max=None):
+                        pbar = tqdm(total=target_size, desc=f"Random sampling query {i+1}/{len(urls)}", unit="records")
+                        
+                        for page in sampled_query.paginate(per_page=200, method='cursor', n_max=None):
                             for record in page:
                                 sampled_records.append(record)
                                 records_count += 1
+                                pbar.update(1)
                                 progress_cb(0.1 + (0.15 * records_count / max(target_size, 1)), 
                                             desc=f"Getting sampled data from query {i+1}/{len(urls)}... ({records_count}/{target_size})")
+                        
+                        pbar.close()
                     
                     print(f'PyAlex sampling successful: got {len(sampled_records)} records (requested {target_size})')
                 else:
@@ -555,13 +563,18 @@ def download_openalex_records(
                 all_records = []
                 records_count = 0
                 
-                # Use page pagination for fallback method
-                for page in query.paginate(per_page=200, method='page', n_max=None):
+                # Use cursor pagination for fallback method with tqdm
+                pbar = tqdm(total=query_length, desc=f"Fallback download query {i+1}/{len(urls)}", unit="records")
+                
+                for page in query.paginate(per_page=200, method='cursor', n_max=None):
                     for record in page:
                         all_records.append(record)
                         records_count += 1
+                        pbar.update(1)
                         progress_cb(0.1 + (0.15 * records_count / max(query_length, 1)), 
                                     desc=f"Downloading for sampling from query {i+1}/{len(urls)}...")
+                
+                pbar.close()
                         
                 # Now sample manually
                 if len(all_records) > target_size:
@@ -592,7 +605,11 @@ def download_openalex_records(
             should_break_current_query = False
             # For "First n samples", limit the maximum records fetched to avoid over-downloading
             max_records_to_fetch = target_size if reduce_sample and sample_reduction_method == "First n samples" else None
-            for page in query.paginate(per_page=200, method='page', n_max=max_records_to_fetch):
+            
+            # Create tqdm progress bar for this query
+            pbar = tqdm(total=target_size, desc=f"Downloading query {i+1}/{len(urls)}", unit="records")
+            
+            for page in query.paginate(per_page=200, method='cursor', n_max=max_records_to_fetch):
                 # Add retry mechanism for processing each page
                 max_retries = 5
                 base_wait_time = 1  # Starting wait time in seconds
@@ -603,13 +620,14 @@ def download_openalex_records(
                         for record in page:
                             # Safety check: don't process if we've already reached target
                             if reduce_sample and sample_reduction_method == "First n samples" and records_per_query >= target_size:
-                                print(f"Reached target size before processing: {records_per_query}/{target_size}, breaking from download")
                                 should_break_current_query = True
                                 break
                             
                             records.append(record)
                             query_indices.append(i)  # Track which query this record comes from
                             records_per_query += 1
+                            pbar.update(1)
+                            
                             # Safe progress calculation
                             if expected_download_count > 0:
                                 progress_val = 0.1 + (0.2 * len(records) / expected_download_count)
@@ -618,7 +636,6 @@ def download_openalex_records(
                             progress_cb(progress_val, desc=f"Getting data from query {i+1}/{len(urls)}...")
                             
                             if reduce_sample and sample_reduction_method == "First n samples" and records_per_query >= target_size:
-                                print(f"Reached target size: {records_per_query}/{target_size}, breaking from download")
                                 should_break_current_query = True
                                 break
                         # If we get here without an exception, break the retry loop
@@ -635,6 +652,8 @@ def download_openalex_records(
                     # Break out of retry loop if we've reached target
                     if should_break_current_query:
                         break
+            
+            pbar.close()
             
             if should_break_current_query:
                 print(f"Successfully downloaded target size for query {i+1}, moving to next query")

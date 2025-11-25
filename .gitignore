@@ -28,6 +28,10 @@ config/secrets.yml
 secrets.json
 
 
+# Large data files
+files/MPI-abstracts-OA.csv
+articles_df.pkl
+
 # directories
 stanford-encyclopedia/
 reading_list/

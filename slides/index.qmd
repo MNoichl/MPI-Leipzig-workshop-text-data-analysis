@@ -38,10 +38,79 @@ max-scale: 1.6
 
 # {background-iframe="background_network.html" background-size="120%" background-position="left bottom" background-opacity="1."}
 ::: {.absolute top=-50 left=700 background="#000" .title-block}
-<h1 class="title">Data-Driven Methods for Philosophy</h1>
-<p class="author"> Max Noichl & Gregor Bös</p>
+<h1 class="title">Social science \n in (latent) \n spaaaaace!</h1>
+<p class="author"> Max Noichl</p>
 <p class="date">2025-09-17</p>
 :::
+
+
+# Abstract
+
+
+I propose that the combination of large scale, unsupervisedly trained models of cultural material ("foundation models") with progress in manifold learning enables novel approaches in a number of social sciencea
+
+
+
+
+
+# Many concepts in Soc Sci Humanities
+
+
+Are drawn from Spatial metaphors that correspond to manifolds. 
+
+
+#  An illustration
+
+* This is not research, but an example, to make things more tangible
+
+
+
+
+
+
+
+
+# So what
+* Amazing that this works
+*
+
+Zoo of manifold learning methods
+
+tda mapper, Dreams UMAP PACmap STARmap, Isomap, PAGA
+
+
+
+# Other tasks depend on this working
+
+
+
+
+
+
+
+
+# So many problems!
+
+
+
+
+
+# Summary:
+
+* another way of looking at this: Let's do AI interpreatbility to ourselves.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 
 
