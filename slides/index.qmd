@@ -38,31 +38,52 @@ max-scale: 1.6
 
 # {background-iframe="background_network.html" background-size="120%" background-position="left bottom" background-opacity="1."}
 ::: {.absolute top=-50 left=700 background="#000" .title-block}
-<h1 class="title">Social science \n in (latent) \n spaaaaace!</h1>
+<h1 class="title">Social science \n in (latent) \n space!</h1>
 <p class="author"> Max Noichl</p>
 <p class="date">2025-09-17</p>
 :::
 
 
-# Abstract
+
+# Intro
+
+* Max Noichl, Promovendus at Utrecht University in *theoretical Philosophy*
+*
+*
 
 
-I propose that the combination of large scale, unsupervisedly trained models of cultural material ("foundation models") with progress in manifold learning enables novel approaches in a number of social sciencea
+
+# What's a latent space
+
+* LLMs have internal representations..
 
 
 
 
-
-# Many concepts in Soc Sci Humanities
-
-
-Are drawn from Spatial metaphors that correspond to manifolds. 
 
 # The manifold hypothesis
 
 ::: {.r-stack}
 ![](images/Illustration_manifold_hypothesis.png){width="100%" fig-align="center"}
 :::
+
+
+
+
+# Spatial metaphors 
+
+
+Are drawn from Spatial metaphors that correspond to manifolds. 
+
+
+
+* This is not a classification scheme!
+
+
+# Social science in latent space?
+
+* Can we extract these representations, 
+
 
 
 
@@ -83,7 +104,7 @@ Are drawn from Spatial metaphors that correspond to manifolds.
 
 Zoo of manifold learning methods
 
-tda mapper, Dreams UMAP PACmap STARmap, Isomap, PAGA
+UMAP, t-SNE, tda mapper, DREAMS,  PACmap, STARmap, Isomap, PAGA
 
 
 
