@@ -58,6 +58,13 @@ I propose that the combination of large scale, unsupervisedly trained models of 
 
 Are drawn from Spatial metaphors that correspond to manifolds. 
 
+# The manifold hypothesis
+
+::: {.r-stack}
+![](images/Illustration_manifold_hypothesis.png){width="100%" fig-align="center"}
+:::
+
+
 
 #  An illustration
 
@@ -106,12 +113,7 @@ tda mapper, Dreams UMAP PACmap STARmap, Isomap, PAGA
 
 
 
-
-
-
-
-
-
+<!-- 
 # 
 
 <iframe
@@ -122,7 +124,7 @@ tda mapper, Dreams UMAP PACmap STARmap, Isomap, PAGA
 ></iframe>
 
 Follow along at: [https://mnoichl.github.io/OZSW2025-data-driven-philosophy/](https://mnoichl.github.io/OZSW2025-data-driven-philosophy/)
-
+ -->
 
 # 
 
