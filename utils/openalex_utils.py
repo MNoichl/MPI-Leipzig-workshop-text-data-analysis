@@ -512,7 +512,7 @@ def download_openalex_records(
                             
                             batch_records = []
                             batch_count = 0
-                            for page in batch_query.paginate(per_page=200, method='cursor', n_max=None):
+                            for page in batch_query.paginate(per_page=200, method='page'):
                                 for record in page:
                                     # Check for duplicates using OpenAlex ID
                                     record_id = record.get('id', '')
@@ -542,7 +542,7 @@ def download_openalex_records(
                         records_count = 0
                         pbar = tqdm(total=target_size, desc=f"Random sampling query {i+1}/{len(urls)}", unit="records")
                         
-                        for page in sampled_query.paginate(per_page=200, method='cursor', n_max=None):
+                        for page in sampled_query.paginate(per_page=200, method='page'):
                             for record in page:
                                 sampled_records.append(record)
                                 records_count += 1

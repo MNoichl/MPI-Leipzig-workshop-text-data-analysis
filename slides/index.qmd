@@ -124,7 +124,7 @@ UMAP, t-SNE, tda mapper, DREAMS,  PACmap, STARmap, Isomap, PAGA
 
 
 # Summary:
-
+*I think there is a lot of potential here to get the language in which we talk about, and do culture, aligned with empirical methods!
 * another way of looking at this: Let's do AI interpreatbility to ourselves.
 
 
