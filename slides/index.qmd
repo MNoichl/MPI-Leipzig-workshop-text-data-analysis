@@ -48,8 +48,9 @@ max-scale: 1.6
 # Intro
 
 * Max Noichl, Promovendus at Utrecht University in *theoretical Philosophy*
-*
-*
+* Very WIP!
+*  
+* Terminology will be a bit *sloppy*: E. g. "Embedding" has a rigurous definition in mathematics, and a relaxed one in ML.
 
 
 
