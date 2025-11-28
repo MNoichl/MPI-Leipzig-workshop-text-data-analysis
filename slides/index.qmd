@@ -19,7 +19,7 @@ format:
         auto-stretch: false
         incremental: true 
         
-bibliography: my_lib.bib
+bibliography: CompTemp.bib
 # csl: the-journal-of-modern-history.csl
 cite-method: citeproc
 dependencies:
@@ -35,16 +35,7 @@ max-scale: 1.6
 #quarto preview /Users/Noich001/Desktop/network_epistemology_playground/talk_BOCHUM/Data_and_ABMs.qmd
 #quarto add martinomagnifico/quarto-multimodal
 ---
-
-<!-- # {background-iframe="background_network.html" background-size="120%" background-position="left bottom" background-opacity="1."}
-::: {.absolute top=-50 left=700 background="#000" .title-block}
-<h1 class="title">Social science \n in latent \n space!</h1>
-<p class="author"> Max Noichl</p>
-<p class="date">2025-09-17</p>
-::: -->
-
-
-# {background-image="images/manifold_background_2.png" background-size="100%" background-position="left bottom" background-opacity="1."}
+# {background-image="images/manifold_background_1.png" background-size="100%" background-position="left bottom" background-opacity="1."} 
 ::: {.absolute top=-50 left=700 background="#000" .title-block}
 <h1 class="title">Social science \n in latent \n space</h1>
 <p class="author"> Max Noichl</p>
@@ -109,7 +100,7 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 
 
 ::: aside
-@mcinnesUMAPUniformManifold2018; @maatenVisualizingDataUsing2008; @bohmUnifyingPerspectiveNeighbor2020; kuryDREAMSPreservingBoth2025 
+@mcinnesUMAPUniformManifold2018; @maatenVisualizingDataUsing2008; @bohmUnifyingPerspectiveNeighbor2020; @kuryDREAMSPreservingBoth2025 
 :::
 
 # Social science in latent space?
@@ -130,11 +121,16 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 #  An illustration
 
 * This is _not_ research, merely illustrative.
-* Take tweets from the MdP's of the 19th Bundestag – German parliament, 2017-2021 @saltzerGermanFederalElection2021
+* Take tweets from the MdP's of the 19th Bundestag – German parliament, 2017-2021 
 * 10-300 tweets per member.
 * Embed using an LLM: Qwen 3 8B, prompted to focus on politics.
 * Run UMAP on the resulting embedding. 
 
+<br>
+
+::: aside
+@saltzerGermanFederalElection2021
+:::
 
 # 
 <iframe
@@ -156,7 +152,7 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 # 
 <iframe
   src="images/political_twitter_3d_umap.html"
-  width="800"
+  width="1000"
   height="800"
   style="border:0; display: block; margin: 0 auto;"
 ></iframe>
@@ -204,4 +200,14 @@ Second meeting
 :::
 ::: {.r-fit-text }
 Meeting on October 1, 13:00: Getting more concrete!
+
+
+<!-- # {background-iframe="background_network.html" background-size="120%" background-position="left bottom" background-opacity="1."}
+::: {.absolute top=-50 left=700 background="#000" .title-block}
+<h1 class="title">Social science \n in latent \n space!</h1>
+<p class="author"> Max Noichl</p>
+<p class="date">2025-09-17</p>
+::: -->
+
+
 ::: -->

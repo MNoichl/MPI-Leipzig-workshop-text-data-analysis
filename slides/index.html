@@ -158,16 +158,7 @@
     <div class="slides">
 
 
-<section class="slide level2">
-
-<!-- # {background-iframe="background_network.html" background-size="120%" background-position="left bottom" background-opacity="1."}
-::: {.absolute top=-50 left=700 background="#000" .title-block}
-<h1 class="title">Social science \n in latent \n space!</h1>
-<p class="author"> Max Noichl</p>
-<p class="date">2025-09-17</p>
-::: -->
-</section>
-<section id="section" class="title-slide slide level1 center" data-background-image="images/manifold_background_2.png" data-background-size="100%" data-background-position="left bottom" data-background-opacity="1.">
+<section id="section" class="title-slide slide level1 center" data-background-image="images/manifold_background_1.png" data-background-size="100%" data-background-position="left bottom" data-background-opacity="1.">
 <h1></h1>
 <div class="absolute title-block" data-background="#000" style="top: -50px; left: 700px; ">
 <h1 class="title">
@@ -243,7 +234,7 @@ Max Noichl
 <p><br></p>
 
 <aside><div>
-<p><span class="citation" data-cites="mcinnesUMAPUniformManifold2018">McInnes, Healy, and Melville (<a href="#/literature" role="doc-biblioref" onclick="">2018</a>)</span>; <span class="citation" data-cites="maatenVisualizingDataUsing2008">Maaten and Hinton (<a href="#/literature" role="doc-biblioref" onclick="">2008</a>)</span>; <span class="citation" data-cites="bohmUnifyingPerspectiveNeighbor2020">Böhm, Berens, and Kobak (<a href="#/literature" role="doc-biblioref" onclick="">2020</a>)</span>; kuryDREAMSPreservingBoth2025</p>
+<p><span class="citation" data-cites="mcinnesUMAPUniformManifold2018">McInnes, Healy, and Melville (<a href="#/literature" role="doc-biblioref" onclick="">2018</a>)</span>; <span class="citation" data-cites="maatenVisualizingDataUsing2008">Maaten and Hinton (<a href="#/literature" role="doc-biblioref" onclick="">2008</a>)</span>; <span class="citation" data-cites="bohmUnifyingPerspectiveNeighbor2020">Böhm, Berens, and Kobak (<a href="#/literature" role="doc-biblioref" onclick="">2020</a>)</span>; <span class="citation" data-cites="kuryDREAMSPreservingBoth2025">Kury, Kobak, and Damrich (<a href="#/literature" role="doc-biblioref" onclick="">2025</a>)</span></p>
 </div></aside></section>
 
 <section id="social-science-in-latent-space" class="title-slide slide level1 center">
@@ -253,7 +244,7 @@ Max Noichl
 <li class="fragment"><a href="#/" class="fragment opens-modal" data-modal-type="image" data-modal-url="images/soc_sci_structures.png">Spatial metaphors.</a></li>
 <li class="fragment">This is not a classification scheme!</li>
 <li class="fragment">Can we extract these representations?</li>
-<li class="fragment">LLMs appear to have internal world models <a href="#/" class="fragment opens-modal" data-modal-type="image" data-modal-url="images/tegmark_world_model.png"><span class="citation" data-cites="gurneeLanguageModelsRepresent2024a">(<span><strong>gurneeLanguageModelsRepresent2024a?</strong></span>)</span></a></li>
+<li class="fragment">LLMs appear to have internal world models <a href="#/" class="fragment opens-modal" data-modal-type="image" data-modal-url="images/tegmark_world_model.png"><span class="citation" data-cites="gurneeLanguageModelsRepresent2024a">Gurnee and Tegmark (<span>2024</span>)</span></a></li>
 <li class="fragment">Can we extract ‘social-world’ models?</li>
 </ul>
 </section>
@@ -262,12 +253,16 @@ Max Noichl
 <h1>An illustration</h1>
 <ul>
 <li class="fragment">This is <em>not</em> research, merely illustrative.</li>
-<li class="fragment">Take tweets from the MdP’s of the 19th Bundestag – German parliament, 2017-2021 <span class="citation" data-cites="saltzerGermanFederalElection2021">(<a href="#/literature" role="doc-biblioref" onclick=""><strong>saltzerGermanFederalElection2021?</strong></a>)</span></li>
+<li class="fragment">Take tweets from the MdP’s of the 19th Bundestag – German parliament, 2017-2021</li>
 <li class="fragment">10-300 tweets per member.</li>
 <li class="fragment">Embed using an LLM: Qwen 3 8B, prompted to focus on politics.</li>
 <li class="fragment">Run UMAP on the resulting embedding.</li>
 </ul>
-</section>
+<p><br></p>
+
+<aside><div>
+<p><span class="citation" data-cites="saltzerGermanFederalElection2021">Sältzer and Stier (<a href="#/literature" role="doc-biblioref" onclick="">2021</a>)</span></p>
+</div></aside></section>
 
 <section id="section-2" class="title-slide slide level1 center">
 <h1></h1>
@@ -283,7 +278,7 @@ Max Noichl
 
 <section id="section-4" class="title-slide slide level1 center">
 <h1></h1>
-<iframe src="images/political_twitter_3d_umap.html" width="800" height="800" style="border:0; display: block; margin: 0 auto;">
+<iframe src="images/political_twitter_3d_umap.html" width="1000" height="800" style="border:0; display: block; margin: 0 auto;">
 </iframe>
 </section>
 
@@ -310,7 +305,7 @@ Max Noichl
 <h1>Other tasks depend on this working</h1>
 <ul>
 <li class="fragment">LLM’S in downstream data-labelling for comp. soc. sci./humanities tasks.</li>
-<li class="fragment">“In-silico” social science. <span class="citation" data-cites="manningAutomatedSocialScience2024">(<a href="#/literature" role="doc-biblioref" onclick=""><strong>manningAutomatedSocialScience2024?</strong></a>)</span></li>
+<li class="fragment">“In-silico” social science. <span class="citation" data-cites="manningAutomatedSocialScience2024">Manning, Zhu, and Horton (<a href="#/literature" role="doc-biblioref" onclick="">2024</a>)</span></li>
 <li class="fragment">Why not cut out the the middle man? (Sampling)</li>
 <li class="fragment">AI interpretability to ourselves.</li>
 </ul>
@@ -334,20 +329,41 @@ Second meeting
 :::
 ::: {.r-fit-text }
 Meeting on October 1, 13:00: Getting more concrete!
-::: -->
 
+
+<!-- # {background-iframe="background_network.html" background-size="120%" background-position="left bottom" background-opacity="1."}
+::: {.absolute top=-50 left=700 background="#000" .title-block}
+<h1 class="title">Social science \n in latent \n space!</h1>
+<p class="author"> Max Noichl</p>
+<p class="date">2025-09-17</p>
+::: -->
+<div class="-->">
+
+</div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bohmUnifyingPerspectiveNeighbor2020" class="csl-entry" role="listitem">
-Böhm, Jan Niklas, Philipp Berens, and Dmitry Kobak. 2020. <span>“A <span>Unifying Perspective</span> on <span>Neighbor Embeddings</span> Along the <span>Attraction-Repulsion Spectrum</span>.”</span> <em>arXiv:2007.08902 [Cs, Stat]</em>, July. <a href="https://arxiv.org/abs/2007.08902">https://arxiv.org/abs/2007.08902</a>.
+Böhm, Jan Niklas, Philipp Berens, and Dmitry Kobak. 2020. <span>“A <span>Unifying Perspective</span> on <span>Neighbor Embeddings</span> Along the <span>Attraction-Repulsion Spectrum</span>.”</span> <a href="http://arxiv.org/abs/2007.08902">http://arxiv.org/abs/2007.08902</a>.
 </div>
 <div id="ref-chariSpeciousArtSingleCell" class="csl-entry" role="listitem">
 Chari, Tara, Joeyta Banerjee, and Lior Pachter. n.d. <span>“The <span>Specious Art</span> of <span>Single-Cell Genomics</span>,”</span> 23.
 </div>
+<div id="ref-gurneeLanguageModelsRepresent2024a" class="csl-entry" role="listitem">
+Gurnee, Wes, and Max Tegmark. 2024. <span>“Language <span>Models Represent Space</span> and <span>Time</span>.”</span> March 4, 2024. <a href="https://doi.org/10.48550/arXiv.2310.02207">https://doi.org/10.48550/arXiv.2310.02207</a>.
+</div>
+<div id="ref-kuryDREAMSPreservingBoth2025" class="csl-entry" role="listitem">
+Kury, Noël, Dmitry Kobak, and Sebastian Damrich. 2025. <em><span>DREAMS</span>: <span>Preserving</span> Both <span>Local</span> and <span>Global Structure</span> in <span>Dimensionality Reduction</span></em>. <a href="https://doi.org/10.48550/arXiv.2508.13747">https://doi.org/10.48550/arXiv.2508.13747</a>.
+</div>
 <div id="ref-maatenVisualizingDataUsing2008" class="csl-entry" role="listitem">
-Maaten, Laurens van der, and Geoffrey Hinton. 2008. <span>“Visualizing Data Using t-<span>SNE</span>.”</span> <em>Journal of Machine Learning Research</em> 9 (Nov): 2579–2605.
+Maaten, Laurens van der, and Geoffrey Hinton. 2008. <span>“Visualizing Data Using t-<span>SNE</span>.”</span> <em>Journal of Machine Learning Research</em> 9: 2579–2605.
+</div>
+<div id="ref-manningAutomatedSocialScience2024" class="csl-entry" role="listitem">
+Manning, Benjamin S., Kehang Zhu, and John J. Horton. 2024. <span>“Automated <span>Social Science</span>: <span>Language Models</span> as <span>Scientist</span> and <span>Subjects</span>.”</span> April 25, 2024. <a href="https://doi.org/10.48550/arXiv.2404.11794">https://doi.org/10.48550/arXiv.2404.11794</a>.
 </div>
 <div id="ref-mcinnesUMAPUniformManifold2018" class="csl-entry" role="listitem">
-McInnes, Leland, John Healy, and James Melville. 2018. <span>“<span>UMAP</span>: <span>Uniform Manifold Approximation</span> and <span>Projection</span> for <span>Dimension Reduction</span>.”</span> <em>arXiv:1802.03426 [Cs, Stat]</em>, February. <a href="https://arxiv.org/abs/1802.03426">https://arxiv.org/abs/1802.03426</a>.
+McInnes, Leland, John Healy, and James Melville. 2018. <span>“<span>UMAP</span>: <span>Uniform Manifold Approximation</span> and <span>Projection</span> for <span>Dimension Reduction</span>.”</span> <a href="http://arxiv.org/abs/1802.03426">http://arxiv.org/abs/1802.03426</a>.
+</div>
+<div id="ref-saltzerGermanFederalElection2021" class="csl-entry" role="listitem">
+Sältzer, Marius, and Sebastian Stier. 2021. <span>“The <span>German Federal Election</span> 2021 <span>Twitter Dataset</span>.”</span> GESIS Blog; GESIS - Leibniz-Institute for the Social Sciences. 2021. <a href="https://doi.org/10.34879/GESISBLOG.2021.48">https://doi.org/10.34879/GESISBLOG.2021.48</a>.
 </div>
 </div>
 </section>
