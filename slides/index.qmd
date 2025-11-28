@@ -57,15 +57,15 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 
 
 
-# Intro
+# Intro & Disclaimers
 
-* Max Noichl, Utrecht University, doing a PhD in *theoretical Philosophy*
+* Max Noichl, Utrecht University, doing a PhD in *theoretical philosophy*
 * Computational humanities • model transfer • agent based models of epistemic communities • Philosophy of ML & AI.
 * Very WIP! – Theorizing an emergent phenomenon.
 * Terminology will be *sloppy*: E. g. "Embedding" has a rigurous definition in mathematics, and a relaxed one in ML.
 
 
-# What's a latent space
+# What is a latent space?
 
 * Artificial neural networks often have internal 'hidden' representations, which lie in a latent space. [E. g. Autoencoders](#){.fragment .opens-modal
   data-modal-type="image"
@@ -78,7 +78,6 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 # The Manifold hypothesis I
 * **Manifold:** A topological space that around each point resembles euclidean space.
 * **Manifold hypothesis:** Most real, high dimensional data (e.g. images, texts) actually lies on low dimensional manifolds in high dim. space. Data often has a low 'intrinsic dimensionality'.
-* Why do we believe this? – Dimensionality reduction *works* (e.g. in prediction pipelines).
 
 
 # The manifold hypothesis II
@@ -87,14 +86,23 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 ![](images/Illustration_manifold_hypothesis.png){width="100%" fig-align="center"}
 :::
 
+
+# The manifold hypothesis III
+
+* Epistemic status unclear (assumption, quasi-Kantian condition, empirical fact?)
+* Why do we believe this? – Dimensionality reduction *works* (e.g. in prediction pipelines).
+
 # Manifold learning
+
 * There are a number of techniques that make these latent structures accessible.
 * UMAP, t-SNE, Autoencoders, tda mapper, DREAMS,  PACmap, STARmap, Isomap, PAGA,...
+
+<br>
+
 
 ::: aside
 @mcinnesUMAPUniformManifold2018; @maatenVisualizingDataUsing2008; @bohmUnifyingPerspectiveNeighbor2020; kuryDREAMSPreservingBoth2025 
 :::
-
 
 # Social science in latent space?
 
@@ -114,8 +122,7 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
 #  An illustration
 
 * This is _not_ research, merely illustrative.
-* Take tweets from the MdP's of the 19th Bundestag (German parliament, 2017-2021 (@saltzerGermanFederalElection2021
-)).
+* Take tweets from the MdP's of the 19th Bundestag – German parliament, 2017-2021 @saltzerGermanFederalElection2021
 * 10-300 tweets per member.
 * Embed using an LLM: Qwen 3 8B, prompted to focus on politics.
 * Run UMAP on the resulting embedding. 
@@ -155,22 +162,25 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
     4. Dimensionality Reduction.    
 * How do we nudge the model into the right subspace? Prompts, sparse auto-encoders?
 
+<br>
+
 ::: aside
 @chariSpeciousArtSingleCell
 :::
 
 # Other tasks depend on this working
 * LLM'S in downstream data-labelling for comp. soc. sci./humanities tasks.
-* "In-silico" social science. 
-
+* "In-silico" social science. @manningAutomatedSocialScience2024
+* Why not cut out the the middle man? (Sampling)
+* AI interpretability to ourselves.
 
 
 # But this is promising!
 * Get the language in which we *talk about*, and *do* culture, aligned with empirical methods.
 * Theoretical models (e. g. ABM's) could be run on these topologies.
-* AI interpretability to ourselves.
 
 
+# Literature
 
 
 

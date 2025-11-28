@@ -180,18 +180,18 @@ Max Noichl
 <p>Follow along at: <a href="https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analysis">https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analysis</a></p>
 </section>
 
-<section id="intro" class="title-slide slide level1 center">
-<h1>Intro</h1>
+<section id="intro-disclaimers" class="title-slide slide level1 center">
+<h1>Intro &amp; Disclaimers</h1>
 <ul>
-<li class="fragment">Max Noichl, Utrecht University, doing a PhD in <em>theoretical Philosophy</em></li>
+<li class="fragment">Max Noichl, Utrecht University, doing a PhD in <em>theoretical philosophy</em></li>
 <li class="fragment">Computational humanities • model transfer • agent based models of epistemic communities • Philosophy of ML &amp; AI.</li>
 <li class="fragment">Very WIP! – Theorizing an emergent phenomenon.</li>
 <li class="fragment">Terminology will be <em>sloppy</em>: E. g. “Embedding” has a rigurous definition in mathematics, and a relaxed one in ML.</li>
 </ul>
 </section>
 
-<section id="whats-a-latent-space" class="title-slide slide level1 center">
-<h1>What’s a latent space</h1>
+<section id="what-is-a-latent-space" class="title-slide slide level1 center">
+<h1>What is a latent space?</h1>
 <ul>
 <li class="fragment">Artificial neural networks often have internal ‘hidden’ representations, which lie in a latent space. <a href="#/" class="fragment opens-modal" data-modal-type="image" data-modal-url="images/autoencoder.png">E. g. Autoencoders</a></li>
 <li class="fragment">LLMs have a latent space <a href="#/" class="fragment opens-modal" data-modal-type="iframe" data-modal-url="https://poloclub.github.io/transformer-explainer/">as well.</a></li>
@@ -203,7 +203,6 @@ Max Noichl
 <ul>
 <li class="fragment"><strong>Manifold:</strong> A topological space that around each point resembles euclidean space.</li>
 <li class="fragment"><strong>Manifold hypothesis:</strong> Most real, high dimensional data (e.g.&nbsp;images, texts) actually lies on low dimensional manifolds in high dim. space. Data often has a low ‘intrinsic dimensionality’.</li>
-<li class="fragment">Why do we believe this? – Dimensionality reduction <em>works</em> (e.g.&nbsp;in prediction pipelines).</li>
 </ul>
 </section>
 
@@ -218,15 +217,24 @@ Max Noichl
 </div>
 </section>
 
+<section id="the-manifold-hypothesis-iii" class="title-slide slide level1 center">
+<h1>The manifold hypothesis III</h1>
+<ul>
+<li class="fragment">Epistemic status unclear (assumption, quasi-Kantian condition, empirical fact?)</li>
+<li class="fragment">Why do we believe this? – Dimensionality reduction <em>works</em> (e.g.&nbsp;in prediction pipelines).</li>
+</ul>
+</section>
+
 <section id="manifold-learning" class="title-slide slide level1 center">
 <h1>Manifold learning</h1>
 <ul>
 <li class="fragment">There are a number of techniques that make these latent structures accessible.</li>
 <li class="fragment">UMAP, t-SNE, Autoencoders, tda mapper, DREAMS, PACmap, STARmap, Isomap, PAGA,…</li>
 </ul>
+<p><br></p>
 
 <aside><div>
-<p><span class="citation" data-cites="mcinnesUMAPUniformManifold2018">McInnes, Healy, and Melville (<a href="#/but-this-is-promising" role="doc-biblioref" onclick="">2018</a>)</span>; <span class="citation" data-cites="maatenVisualizingDataUsing2008">Maaten and Hinton (<a href="#/but-this-is-promising" role="doc-biblioref" onclick="">2008</a>)</span>; <span class="citation" data-cites="bohmUnifyingPerspectiveNeighbor2020">Böhm, Berens, and Kobak (<a href="#/but-this-is-promising" role="doc-biblioref" onclick="">2020</a>)</span>; kuryDREAMSPreservingBoth2025</p>
+<p><span class="citation" data-cites="mcinnesUMAPUniformManifold2018">McInnes, Healy, and Melville (<a href="#/literature" role="doc-biblioref" onclick="">2018</a>)</span>; <span class="citation" data-cites="maatenVisualizingDataUsing2008">Maaten and Hinton (<a href="#/literature" role="doc-biblioref" onclick="">2008</a>)</span>; <span class="citation" data-cites="bohmUnifyingPerspectiveNeighbor2020">Böhm, Berens, and Kobak (<a href="#/literature" role="doc-biblioref" onclick="">2020</a>)</span>; kuryDREAMSPreservingBoth2025</p>
 </div></aside></section>
 
 <section id="social-science-in-latent-space" class="title-slide slide level1 center">
@@ -245,7 +253,7 @@ Max Noichl
 <h1>An illustration</h1>
 <ul>
 <li class="fragment">This is <em>not</em> research, merely illustrative.</li>
-<li class="fragment">Take tweets from the MdP’s of the 19th Bundestag (German parliament, 2017-2021 (<span class="citation" data-cites="saltzerGermanFederalElection2021">(<a href="#/but-this-is-promising" role="doc-biblioref" onclick=""><strong>saltzerGermanFederalElection2021?</strong></a>)</span> )).</li>
+<li class="fragment">Take tweets from the MdP’s of the 19th Bundestag – German parliament, 2017-2021 <span class="citation" data-cites="saltzerGermanFederalElection2021">(<a href="#/literature" role="doc-biblioref" onclick=""><strong>saltzerGermanFederalElection2021?</strong></a>)</span></li>
 <li class="fragment">10-300 tweets per member.</li>
 <li class="fragment">Embed using an LLM: Qwen 3 8B, prompted to focus on politics.</li>
 <li class="fragment">Run UMAP on the resulting embedding.</li>
@@ -283,26 +291,32 @@ Max Noichl
 </ol></li>
 <li class="fragment">How do we nudge the model into the right subspace? Prompts, sparse auto-encoders?</li>
 </ul>
+<p><br></p>
 
 <aside><div>
-<p><span class="citation" data-cites="chariSpeciousArtSingleCell">Chari, Banerjee, and Pachter (<a href="#/but-this-is-promising" role="doc-biblioref" onclick="">n.d.</a>)</span></p>
+<p><span class="citation" data-cites="chariSpeciousArtSingleCell">Chari, Banerjee, and Pachter (<a href="#/literature" role="doc-biblioref" onclick="">n.d.</a>)</span></p>
 </div></aside></section>
 
 <section id="other-tasks-depend-on-this-working" class="title-slide slide level1 center">
 <h1>Other tasks depend on this working</h1>
 <ul>
 <li class="fragment">LLM’S in downstream data-labelling for comp. soc. sci./humanities tasks.</li>
-<li class="fragment">“In-silico” social science.</li>
+<li class="fragment">“In-silico” social science. <span class="citation" data-cites="manningAutomatedSocialScience2024">(<a href="#/literature" role="doc-biblioref" onclick=""><strong>manningAutomatedSocialScience2024?</strong></a>)</span></li>
+<li class="fragment">Why not cut out the the middle man? (Sampling)</li>
+<li class="fragment">AI interpretability to ourselves.</li>
 </ul>
 </section>
 
-<section id="but-this-is-promising" class="title-slide slide level1 smaller scrollable">
+<section id="but-this-is-promising" class="title-slide slide level1 center">
 <h1>But this is promising!</h1>
 <ul>
 <li class="fragment">Get the language in which we <em>talk about</em>, and <em>do</em> culture, aligned with empirical methods.</li>
 <li class="fragment">Theoretical models (e. g. ABM’s) could be run on these topologies.</li>
-<li class="fragment">AI interpretability to ourselves.</li>
 </ul>
+</section>
+
+<section id="literature" class="title-slide slide level1 smaller scrollable">
+<h1>Literature</h1>
 <!-- 
 # 
 
