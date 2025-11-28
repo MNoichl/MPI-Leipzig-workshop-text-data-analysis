@@ -165,6 +165,7 @@ Follow along at: [https://mnoichl.github.io/MPI-Leipzig-workshop-text-data-analy
     3. Actual data
     4. Dimensionality Reduction.    
 * How do we nudge the model into the right subspace? Prompts, sparse auto-encoders?
+* Temporal analysis: Movement _in_ vs _through_ space.
 
 <br>
 
