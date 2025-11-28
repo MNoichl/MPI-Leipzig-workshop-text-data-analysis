@@ -47,19 +47,20 @@ max-scale: 1.6
 
 # Intro
 
-* Max Noichl, Promovendus at Utrecht University in *theoretical Philosophy*
+* Max Noichl, Utrecht University, doing a PhD in *theoretical Philosophy*
+* Comp. humanities • model transfer • agent based models of epistemic communities
 * Very WIP!
-*  
 * Terminology will be a bit *sloppy*: E. g. "Embedding" has a rigurous definition in mathematics, and a relaxed one in ML.
-
 
 
 # What's a latent space
 
-* LLMs have internal representations..
-
-
-
+* LLMs have internal 'hidden' representations, the [latent space.](#){.fragment .opens-modal
+  data-modal-type="iframe"
+  data-modal-url="https://poloclub.github.io/transformer-explainer/"}
+* The **Manifold hypothesis**
+* Manifold: A topological space that around each point resembles euclidean space.
+* Manifold hypothesis: Most real, high dimensional data (e.g. images, texts) actually lies on low dimensional manifolds in high dim. space.
 
 
 # The manifold hypothesis
@@ -68,36 +69,66 @@ max-scale: 1.6
 ![](images/Illustration_manifold_hypothesis.png){width="100%" fig-align="center"}
 :::
 
+# Manifold learning
+* There are a number of techniques that make these latent structures accessible.
+* UMAP, t-SNE, **Autoencoders**, tda mapper, DREAMS,  PACmap, STARmap, Isomap, PAGA,...
 
-
+::: aside
+@
+:::
 
 # Spatial metaphors 
 
-
-Are drawn from Spatial metaphors that correspond to manifolds. 
-
-
-
+* Many concepts we use  to describe our social world are drawn from spatial metaphors.
+* [Spatial metaphors.](#){.fragment .opens-modal
+  data-modal-type="image"
+  data-modal-url="images/soc_sci_structures.png"}
 * This is not a classification scheme!
 
 
 # Social science in latent space?
 
 * Can we extract these representations, 
-
-
+* LLMs appear to have internal world models [@gurneeLanguageModelsRepresent2024a
+](#){.fragment .opens-modal
+  data-modal-type="image"
+  data-modal-url="images/tegmark_world_model.png"}
+* Can we extract 'social-world' models?
 
 
 #  An illustration
 
-* This is not research, but an example, to make things more tangible
+* This is _not_ research, merely illustrative.
+* Take tweets from the MdP's of the 19th Bundestag (German parliament, 2017-2021 (!)).
+* 10-300 tweets per member.
+* Embed using an LLM: Qwen 3 8B, prompted to focus on politics
+* Run DREAMS on the resulting embedding. 
 
 
+# 
+<iframe
+  src="images/bundestag_fullmap.html"
+  width="800"
+  height="800"
+  style="border:0; display: block; margin: 0 auto;"
+></iframe>
+
+# 
+<iframe
+  src="images/bundestag_faceted.html"
+  width="1300"
+  height="1000"
+  style="border:0; display: block; margin: 0 auto;"
+></iframe>
 
 
-
-
-
+# 
+<iframe
+  src="images/political_twitter_3d_umap.html"
+  width="800"
+  height="800"
+  style="border:0; display: block; margin: 0 auto;"
+></iframe>
 
 # So what
 * Amazing that this works
@@ -110,23 +141,25 @@ UMAP, t-SNE, tda mapper, DREAMS,  PACmap, STARmap, Isomap, PAGA
 
 
 # Other tasks depend on this working
-
-
-
-
-
-
+* LLM'S in downstream data-labelling for comp. soc. sci./humanities tasks.
+* "In-silico" social science. 
 
 
 # So many problems!
+* So many black-boxes:
+    1. Pre-training-data
+    2. LLM/RLHF
+    3. Actual data
+    4. Dimensionality Reduction.    
+* How do we nudge the model into the right subspace? Prompts, sparse auto-encoders?
 
 
 
+# But much to gain!
+* Get the language in which we *talk about*, and *do* culture, aligned with empirical methods.
+* Theoretical models (e. g. ABM's) could be run on these topologies.
+* AI interpreatbility to ourselves.
 
-
-# Summary:
-*I think there is a lot of potential here to get the language in which we talk about, and do culture, aligned with empirical methods!
-* another way of looking at this: Let's do AI interpreatbility to ourselves.
 
 
 
@@ -138,154 +171,9 @@ UMAP, t-SNE, tda mapper, DREAMS,  PACmap, STARmap, Isomap, PAGA
 <!-- 
 # 
 
-<iframe
-  src="qrcode.html"
-  width="550"
-  height="550"
-  style="border:0; display: block; margin: 0 auto;"
-></iframe>
-
-Follow along at: [https://mnoichl.github.io/OZSW2025-data-driven-philosophy/](https://mnoichl.github.io/OZSW2025-data-driven-philosophy/)
- -->
-
-# 
-
 ::: {.r-fit-text .highlight}
 Second meeting
 :::
 ::: {.r-fit-text }
 Meeting on October 1, 13:00: Getting more concrete!
-:::
-
-# Plan for today
-
-1. Plan for the hackathon
-2. ⁠Assign presentations
-3. Developing project ideas
-
-
-# Hackathon: Thursday, October, 16th
-
-:::{.nonincremental}
-
-*Janskerkhof 13 (Room 0.06) in the morning, Kromme Nieuwegracht 80 (Room 1.06) in the afternoon.*
-
-- **10:00 – 10:30**: Registration, coffee.  
-- **10:30 – 11:00**: Welcome & Introductions in Person
-- **11:00 – 12:30**: Keynote, [Gregor Betz](https://www.gregorbetz.de/)
-- *12:30 – 14:00: Lunch break and move to Kromme Nieuwegracht 80 – 1.06*  
-- **14:00 – 16:30**: Notebook or project work.  
-- *16:30– 17:00: Coffee/snacks*  
-- **17:00 – 18:00**: 3 short paper presentations
-:::
-
-
-# Hackathon: Friday, October, 17th
-
-*Janskerkhof 13 (Room 0.06).*
- 
-:::{.nonincremental}
-- **10:00 – 11:30**: Free project work.  
-- **11:30 – 13:00**: Keynote [Charles Pence](https://charlespence.net/en/)
-- *13:00 – 14:30: Lunch break*  
-- **14:00 – 16:30**: Project work.  
-- *16:30 – 17:00: Coffee/snacks*  
-- **17:00 – 18:00**: 3 short paper presentations
--  Evening Program?
-:::
-
-# Hackathon: Saturday, October, 18th
-
-*Drift 27 (E0.32, Digital Humanities Workspace)* 
-
-:::{.nonincremental}
-- **10:00 – 12:30**: Project Work (open doors: 9:00) 
-- *12:30 – 14:00: Lunch break*  
-- **14:00 – 15:00**: Project Work
-- **15:00 – 16:00**: 4 project presentations 
-- *16:00 – 16:30: Coffee/snacks*  
-- **16:30 – 18:00**: 6 project presentations (continuing from 15:30).
-- **18:00 - 18:30**: Outro & Farewell
-:::
-
-
-# 
-::: {.r-fit-text }
-Coordinating presentations.
-:::
-
-
-# {background-iframe="https://docs.google.com/spreadsheets/d/1T1GJLFnBSXUdIlOCJdrkjguCykdJIJkbgzgGsFTR6qk/edit?gid=17761206#gid=17761206" background-size="120%" background-position="left bottom" background-opacity="1."}
-
-
-
-# 
-
-::: {.r-fit-text .highlight}
-Project Development
-:::
-
-::: {.r-fit-text }
-Let's go over project ideas,
-:::
-::: {.r-fit-text }
- see where we stand and what
-:::
-::: {.r-fit-text }
-needs to happen until October 16.
-:::
-
-
-
-
-
-
-# 
-
-::: {.r-fit-text .highlight}
-First meeting
-:::
-::: {.r-fit-text }
-Meeting on September 17, 11:00: Introductions, etc.!
-:::
-
-# Plan for today
-
-1. ⁠Welcome and Introduction.
-2. ⁠Participant Introductions (current roles, past experiences)
-3. ⁠Participant interests and, where applicable, project ideas
-
-
-
-# {background-iframe="https://gregorboes.com/" background-size="120%" background-position="left bottom" background-opacity="1."}
-
-
-# {background-iframe="https://maxnoichl.eu/" background-size="120%" background-position="left bottom" background-opacity="1."}
-
-
-# 
-
-::: {.r-fit-text .highlight}
-General Introductions
-:::
-::: {.r-fit-text }
-Please introduce yourself, including your background and general interests.
-:::
-
-# 
-
-::: {.r-fit-text .highlight}
-Project Ideas
-:::
-::: {.r-fit-text }
-Please share project ideas. Vague ideas welcome!
-:::
-
-
-
-# What happens next?
-
-* **Until the weekend:** Based on your interests, we compile a list of relevant readings. If you haven't done so, fill out the [nuudel](https://nuudel.digitalcourage.de/9mizSGXFudN7cGCj) for the timing of the next session. 
-* **Until the next session:** You mark on a spreadsheet which readings you are interested in. 
-* **During the next session (1. Oktober):** We coordinate groups to present the readings and to talk through more concrete project-ideas. 
-* **During the hackathon:** Keynotes by [Gregor Betz](https://www.gregorbetz.de/) and [Charles Pence](https://charlespence.net/en/), short reading presentations (10 min presentation + 10 min discussion each), interactive introductions to text-analysis and network-models, and most of all *work, work, work!* 
+::: -->

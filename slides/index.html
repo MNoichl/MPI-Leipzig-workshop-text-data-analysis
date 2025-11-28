@@ -156,9 +156,9 @@ Max Noichl
 <section id="intro" class="title-slide slide level1 center">
 <h1>Intro</h1>
 <ul>
-<li class="fragment">Max Noichl, Promovendus at Utrecht University in <em>theoretical Philosophy</em></li>
+<li class="fragment">Max Noichl, Utrecht University, doing a PhD in <em>theoretical Philosophy</em></li>
+<li class="fragment">Comp. humanities • model transfer • agent based models of epistemic communities</li>
 <li class="fragment">Very WIP!</li>
-<li class="fragment"></li>
 <li class="fragment">Terminology will be a bit <em>sloppy</em>: E. g. “Embedding” has a rigurous definition in mathematics, and a relaxed one in ML.</li>
 </ul>
 </section>
@@ -166,7 +166,10 @@ Max Noichl
 <section id="whats-a-latent-space" class="title-slide slide level1 center">
 <h1>What’s a latent space</h1>
 <ul>
-<li class="fragment">LLMs have internal representations..</li>
+<li class="fragment">LLMs have internal ‘hidden’ representations, the <a href="#/" class="fragment opens-modal" data-modal-type="iframe" data-modal-url="https://poloclub.github.io/transformer-explainer/">latent space.</a></li>
+<li class="fragment">The <strong>Manifold hypothesis</strong></li>
+<li class="fragment">Manifold: A topological space that around each point resembles euclidean space.</li>
+<li class="fragment">Manifold hypothesis: Most real, high dimensional data (e.g.&nbsp;images, texts) actually lies on low dimensional manifolds in high dim. space.</li>
 </ul>
 </section>
 
@@ -181,10 +184,22 @@ Max Noichl
 </div>
 </section>
 
+<section id="manifold-learning" class="title-slide slide level1 center">
+<h1>Manifold learning</h1>
+<ul>
+<li class="fragment">There are a number of techniques that make these latent structures accessible.</li>
+<li class="fragment">UMAP, t-SNE, <strong>Autoencoders</strong>, tda mapper, DREAMS, PACmap, STARmap, Isomap, PAGA,…</li>
+</ul>
+
+<aside><div>
+<p>@</p>
+</div></aside></section>
+
 <section id="spatial-metaphors" class="title-slide slide level1 center">
 <h1>Spatial metaphors</h1>
-<p>Are drawn from Spatial metaphors that correspond to manifolds.</p>
 <ul>
+<li class="fragment">Many concepts we use to describe our social world are drawn from spatial metaphors.</li>
+<li class="fragment"><a href="#/" class="fragment opens-modal" data-modal-type="image" data-modal-url="images/soc_sci_structures.png">Spatial metaphors.</a></li>
 <li class="fragment">This is not a classification scheme!</li>
 </ul>
 </section>
@@ -193,14 +208,38 @@ Max Noichl
 <h1>Social science in latent space?</h1>
 <ul>
 <li class="fragment">Can we extract these representations,</li>
+<li class="fragment">LLMs appear to have internal world models <a href="#/" class="fragment opens-modal" data-modal-type="image" data-modal-url="images/tegmark_world_model.png"><span class="citation" data-cites="gurneeLanguageModelsRepresent2024a">(<span><strong>gurneeLanguageModelsRepresent2024a?</strong></span>)</span></a></li>
+<li class="fragment">Can we extract ‘social-world’ models?</li>
 </ul>
 </section>
 
 <section id="an-illustration" class="title-slide slide level1 center">
 <h1>An illustration</h1>
 <ul>
-<li class="fragment">This is not research, but an example, to make things more tangible</li>
+<li class="fragment">This is <em>not</em> research, merely illustrative.</li>
+<li class="fragment">Take tweets from the MdP’s of the 19th Bundestag (German parliament, 2017-2021 (!)).</li>
+<li class="fragment">10-300 tweets per member.</li>
+<li class="fragment">Embed using an LLM: Qwen 3 8B, prompted to focus on politics</li>
+<li class="fragment">Run DREAMS on the resulting embedding.</li>
 </ul>
+</section>
+
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+<iframe src="images/bundestag_fullmap.html" width="800" height="800" style="border:0; display: block; margin: 0 auto;">
+</iframe>
+</section>
+
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+<iframe src="images/bundestag_faceted.html" width="1300" height="1000" style="border:0; display: block; margin: 0 auto;">
+</iframe>
+</section>
+
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+<iframe src="images/political_twitter_3d_umap.html" width="800" height="800" style="border:0; display: block; margin: 0 auto;">
+</iframe>
 </section>
 
 <section id="so-what" class="title-slide slide level1 center">
@@ -215,187 +254,43 @@ Max Noichl
 
 <section id="other-tasks-depend-on-this-working" class="title-slide slide level1 center">
 <h1>Other tasks depend on this working</h1>
-
+<ul>
+<li class="fragment">LLM’S in downstream data-labelling for comp. soc. sci./humanities tasks.</li>
+<li class="fragment">“In-silico” social science.</li>
+</ul>
 </section>
 
 <section id="so-many-problems" class="title-slide slide level1 center">
 <h1>So many problems!</h1>
-
+<ul>
+<li class="fragment">So many black-boxes:
+<ol type="1">
+<li class="fragment">Pre-training-data</li>
+<li class="fragment">LLM/RLHF</li>
+<li class="fragment">Actual data</li>
+<li class="fragment">Dimensionality Reduction.<br>
+</li>
+</ol></li>
+<li class="fragment">How do we nudge the model into the right subspace? Prompts, sparse auto-encoders?</li>
+</ul>
 </section>
 
-<section id="summary" class="title-slide slide level1 center">
-<h1>Summary:</h1>
-<p><em>I think there is a lot of potential here to get the language in which we talk about, and do culture, aligned with empirical methods! </em> another way of looking at this: Let’s do AI interpreatbility to ourselves.</p>
+<section id="but-much-to-gain" class="title-slide slide level1 center">
+<h1>But much to gain!</h1>
+<ul>
+<li class="fragment">Get the language in which we <em>talk about</em>, and <em>do</em> culture, aligned with empirical methods.</li>
+<li class="fragment">Theoretical models (e. g. ABM’s) could be run on these topologies.</li>
+<li class="fragment">AI interpreatbility to ourselves.</li>
+</ul>
 <!-- 
 # 
 
-<iframe
-  src="qrcode.html"
-  width="550"
-  height="550"
-  style="border:0; display: block; margin: 0 auto;"
-></iframe>
-
-Follow along at: [https://mnoichl.github.io/OZSW2025-data-driven-philosophy/](https://mnoichl.github.io/OZSW2025-data-driven-philosophy/)
- -->
-</section>
-
-<section id="section-1" class="title-slide slide level1 center">
-<h1></h1>
-<div class="r-fit-text highlight">
-<p>Second meeting</p>
-</div>
-<div class="r-fit-text">
-<p>Meeting on October 1, 13:00: Getting more concrete!</p>
-</div>
-</section>
-
-<section id="plan-for-today" class="title-slide slide level1 center">
-<h1>Plan for today</h1>
-<ol type="1">
-<li class="fragment">Plan for the hackathon</li>
-<li class="fragment">⁠Assign presentations</li>
-<li class="fragment">Developing project ideas</li>
-</ol>
-</section>
-
-<section id="hackathon-thursday-october-16th" class="title-slide slide level1 center">
-<h1>Hackathon: Thursday, October, 16th</h1>
-<p><em>Janskerkhof 13 (Room 0.06) in the morning, Kromme Nieuwegracht 80 (Room 1.06) in the afternoon.</em></p>
-<ul>
-<li><strong>10:00 – 10:30</strong>: Registration, coffee.<br>
-</li>
-<li><strong>10:30 – 11:00</strong>: Welcome &amp; Introductions in Person</li>
-<li><strong>11:00 – 12:30</strong>: Keynote, <a href="https://www.gregorbetz.de/">Gregor Betz</a></li>
-<li><em>12:30 – 14:00: Lunch break and move to Kromme Nieuwegracht 80 – 1.06</em><br>
-</li>
-<li><strong>14:00 – 16:30</strong>: Notebook or project work.<br>
-</li>
-<li><em>16:30– 17:00: Coffee/snacks</em><br>
-</li>
-<li><strong>17:00 – 18:00</strong>: 3 short paper presentations</li>
-</ul>
-</section>
-
-<section id="hackathon-friday-october-17th" class="title-slide slide level1 center">
-<h1>Hackathon: Friday, October, 17th</h1>
-<p><em>Janskerkhof 13 (Room 0.06).</em></p>
-<ul>
-<li><strong>10:00 – 11:30</strong>: Free project work.<br>
-</li>
-<li><strong>11:30 – 13:00</strong>: Keynote <a href="https://charlespence.net/en/">Charles Pence</a></li>
-<li><em>13:00 – 14:30: Lunch break</em><br>
-</li>
-<li><strong>14:00 – 16:30</strong>: Project work.<br>
-</li>
-<li><em>16:30 – 17:00: Coffee/snacks</em><br>
-</li>
-<li><strong>17:00 – 18:00</strong>: 3 short paper presentations</li>
-<li>Evening Program?</li>
-</ul>
-</section>
-
-<section id="hackathon-saturday-october-18th" class="title-slide slide level1 center">
-<h1>Hackathon: Saturday, October, 18th</h1>
-<p><em>Drift 27 (E0.32, Digital Humanities Workspace)</em></p>
-<ul>
-<li><strong>10:00 – 12:30</strong>: Project Work (open doors: 9:00)</li>
-<li><em>12:30 – 14:00: Lunch break</em><br>
-</li>
-<li><strong>14:00 – 15:00</strong>: Project Work</li>
-<li><strong>15:00 – 16:00</strong>: 4 project presentations</li>
-<li><em>16:00 – 16:30: Coffee/snacks</em><br>
-</li>
-<li><strong>16:30 – 18:00</strong>: 6 project presentations (continuing from 15:30).</li>
-<li><strong>18:00 - 18:30</strong>: Outro &amp; Farewell</li>
-</ul>
-</section>
-
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
-<div class="r-fit-text">
-<p>Coordinating presentations.</p>
-</div>
-</section>
-
-<section id="section-3" class="title-slide slide level1 center" data-background-iframe="https://docs.google.com/spreadsheets/d/1T1GJLFnBSXUdIlOCJdrkjguCykdJIJkbgzgGsFTR6qk/edit?gid=17761206#gid=17761206" data-background-size="120%" data-background-position="left bottom" data-background-opacity="1.">
-<h1></h1>
-
-</section>
-
-<section id="section-4" class="title-slide slide level1 center">
-<h1></h1>
-<div class="r-fit-text highlight">
-<p>Project Development</p>
-</div>
-<div class="r-fit-text">
-<p>Let’s go over project ideas,</p>
-</div>
-<div class="r-fit-text">
-<p>see where we stand and what</p>
-</div>
-<div class="r-fit-text">
-<p>needs to happen until October 16.</p>
-</div>
-</section>
-
-<section id="section-5" class="title-slide slide level1 center">
-<h1></h1>
-<div class="r-fit-text highlight">
-<p>First meeting</p>
-</div>
-<div class="r-fit-text">
-<p>Meeting on September 17, 11:00: Introductions, etc.!</p>
-</div>
-</section>
-
-<section id="plan-for-today-1" class="title-slide slide level1 center">
-<h1>Plan for today</h1>
-<ol type="1">
-<li class="fragment">⁠Welcome and Introduction.</li>
-<li class="fragment">⁠Participant Introductions (current roles, past experiences)</li>
-<li class="fragment">⁠Participant interests and, where applicable, project ideas</li>
-</ol>
-</section>
-
-<section id="section-6" class="title-slide slide level1 center" data-background-iframe="https://gregorboes.com/" data-background-size="120%" data-background-position="left bottom" data-background-opacity="1.">
-<h1></h1>
-
-</section>
-
-<section id="section-7" class="title-slide slide level1 center" data-background-iframe="https://maxnoichl.eu/" data-background-size="120%" data-background-position="left bottom" data-background-opacity="1.">
-<h1></h1>
-
-</section>
-
-<section id="section-8" class="title-slide slide level1 center">
-<h1></h1>
-<div class="r-fit-text highlight">
-<p>General Introductions</p>
-</div>
-<div class="r-fit-text">
-<p>Please introduce yourself, including your background and general interests.</p>
-</div>
-</section>
-
-<section id="section-9" class="title-slide slide level1 center">
-<h1></h1>
-<div class="r-fit-text highlight">
-<p>Project Ideas</p>
-</div>
-<div class="r-fit-text">
-<p>Please share project ideas. Vague ideas welcome!</p>
-</div>
-</section>
-
-<section id="what-happens-next" class="title-slide slide level1 center">
-<h1>What happens next?</h1>
-<ul>
-<li class="fragment"><strong>Until the weekend:</strong> Based on your interests, we compile a list of relevant readings. If you haven’t done so, fill out the <a href="https://nuudel.digitalcourage.de/9mizSGXFudN7cGCj">nuudel</a> for the timing of the next session.</li>
-<li class="fragment"><strong>Until the next session:</strong> You mark on a spreadsheet which readings you are interested in.</li>
-<li class="fragment"><strong>During the next session (1. Oktober):</strong> We coordinate groups to present the readings and to talk through more concrete project-ideas.</li>
-<li class="fragment"><strong>During the hackathon:</strong> Keynotes by <a href="https://www.gregorbetz.de/">Gregor Betz</a> and <a href="https://charlespence.net/en/">Charles Pence</a>, short reading presentations (10 min presentation + 10 min discussion each), interactive introductions to text-analysis and network-models, and most of all <em>work, work, work!</em></li>
-</ul>
+::: {.r-fit-text .highlight}
+Second meeting
+:::
+::: {.r-fit-text }
+Meeting on October 1, 13:00: Getting more concrete!
+::: -->
 
 </section>
     </div>
